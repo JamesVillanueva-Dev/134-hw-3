@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Experiments with the template, audio, video, canvas and source elements, plus MathML.">
+  <meta name="author" content="James Villanueva">
+  <title>HTML Experiments | James Villanueva</title>
+  <link rel="icon" href="images/headshot.jpg" type="image/jpeg">
+</head>
+<body>
+  <header>
+    <p><a href="index.html">James Villanueva</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.pdf">Resume (PDF)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>HTML experiments</h1>
+    <p>This page tries out HTML elements that the main portfolio doesn't need yet.</p>
+
+    <section aria-labelledby="video-heading">
+      <h2 id="video-heading">Video with multiple sources</h2>
+      <p>A short test-pattern clip. The browser plays the first <code>source</code> format it supports: WebM first, then MP4 as a fallback.</p>
+      <video controls width="640" height="360" poster="media/poster.jpg" preload="metadata">
+        <source src="media/demo.webm" type="video/webm">
+        <source src="media/demo.mp4" type="video/mp4">
+        <p>Your browser can't play this video. <a href="media/demo.mp4">Download the MP4</a>.</p>
+      </video>
+    </section>
+
+    <section aria-labelledby="audio-heading">
+      <h2 id="audio-heading">Audio with multiple sources</h2>
+      <p>A three-second 440&nbsp;Hz test tone, offered as Ogg Vorbis and MP3.</p>
+      <audio controls preload="none">
+        <source src="media/tone.ogg" type="audio/ogg">
+        <source src="media/tone.mp3" type="audio/mpeg">
+        <p>Your browser can't play this audio. <a href="media/tone.mp3">Download the MP3</a>.</p>
+      </audio>
+    </section>
+
+    <section aria-labelledby="canvas-heading">
+      <h2 id="canvas-heading">Canvas</h2>
+      <p>A tiny script draws three bars on this canvas.</p>
+      <canvas id="bar-canvas" width="300" height="150">Three bars of different heights drawn with JavaScript.</canvas>
+      <script>
+        const canvas = document.getElementById("bar-canvas");
+        const ctx = canvas.getContext("2d");
+        const heights = [60, 120, 90];
+        heights.forEach((h, i) => ctx.fillRect(30 + i * 90, 150 - h, 60, h));
+      </script>
+    </section>
+
+    <section aria-labelledby="template-heading">
+      <h2 id="template-heading">Template</h2>
+      <p>The <code>template</code> below holds markup for a future project card. The browser parses it but doesn't display it, so there's nothing visible here. Later, JavaScript can copy it to build cards from data.</p>
+      <template id="project-card-template">
+        <project-card>
+          <h3>Project title</h3>
+          <p>One-line project summary.</p>
+          <a href="projects.html">Read the case study</a>
+        </project-card>
+      </template>
+    </section>
+
+    <section aria-labelledby="mathml-heading">
+      <h2 id="mathml-heading">MathML (extra credit)</h2>
+      <p>Einstein's mass&ndash;energy equivalence:</p>
+      <math display="block">
+        <mi>E</mi>
+        <mo>=</mo>
+        <mi>m</mi>
+        <msup>
+          <mi>c</mi>
+          <mn>2</mn>
+        </msup>
+      </math>
+      <p>MathML has been part of the HTML standard for years, but developers couldn't rely on it because browser support was uneven. Firefox supported it early, while Chrome briefly shipped it and then removed it, and only added MathML Core support in Chrome 109 in January 2023. Until all major browsers supported it, sites used workarounds like images of equations or JavaScript libraries such as MathJax.</p>
+      <p>Source: <a href="https://caniuse.com/mathml">MathML browser support on Can I use</a>.</p>
+    </section>
+
+    <section aria-labelledby="validation-heading">
+      <h2 id="validation-heading">Validation notes</h2>
+      <p>Every page of this site validates with no errors when I upload the HTML files directly to validator.w3.org (Validate by File Upload).</p>
+      <p>When I validate the live Netlify URLs, every page reports one error, &ldquo;Stray start tag script,&rdquo; followed by a fatal error. The reported line is a <code>&lt;script&gt;</code> tag pointing to <code>/.netlify/scripts/hud</code> that appears after my closing <code>&lt;/html&gt;</code> tag. That script is not in my source files. Netlify adds it to the page when serving it, for its &ldquo;Heads-up Display&rdquo; collaboration toolbar. HTML doesn't allow any elements after <code>&lt;/html&gt;</code>, so the validator rejects it and stops checking the rest of the page.</p>
+      <h3>What I tried</h3>
+      <ol>
+        <li>Validated my local files by file upload to confirm my own markup has no errors.</li>
+        <li>Viewed the live page source and confirmed the extra script appears only after <code>&lt;/html&gt;</code>, outside my code.</li>
+        <li>Looked for the setting to turn the Heads-up Display off (Project configuration &rarr; Developer settings &rarr; Collaboration tools). That section isn't available because my project is deployed by drag-and-drop instead of a linked Git repository.</li>
+        <li>Checked Snippet injection under Developer settings and found no snippets I could remove.</li>
+      </ol>
+      <h3>My theory</h3>
+      <p>Netlify injects this toolbar script on manual deploys by default and doesn't offer a way to disable it unless a repository is linked. The error comes from the hosting platform, not from my HTML.</p>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://github.com/JamesVillanueva-Dev">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jamesuvillanueva">LinkedIn</a></li>
+      <li><a href="mailto:j8villanueva@ucsd.edu">Email</a></li>
+      <li><a href="experiments.html" aria-current="page">HTML experiments</a></li>
+    </ul>
+    <p><small>&copy; 2026 James Villanueva</small></p>
+  </footer>
+</body>
+</html>

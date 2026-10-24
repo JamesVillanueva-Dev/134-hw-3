@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of James Villanueva, computer science student at UC San Diego building full-stack web apps.">
+  <meta name="author" content="James Villanueva">
+  <title>James Villanueva | Software Engineer</title>
+  <link rel="icon" href="images/headshot.jpg" type="image/jpeg">
+  <style>
+    /* Custom element #1: a semantic container for one project summary */
+    project-card {
+      display: block;
+      border: 1px solid;
+      padding: 1rem;
+      margin-block: 1rem;
+    }
+  </style>
+  <script>
+    // Custom element #2: logs "Hello World!" to the console when placed on a page.
+    // It does not change the DOM.
+    class HelloWorld extends HTMLElement {
+      connectedCallback() {
+        console.log("Hello World!");
+      }
+    }
+
+    customElements.define("hello-world", HelloWorld);
+  </script>
+</head>
+<body>
+  <header>
+    <p><a href="index.html">James Villanueva</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.pdf">Resume (PDF)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="intro-heading">
+      <h1 id="intro-heading">James Villanueva</h1>
+      <picture>
+        <source srcset="images/headshot.webp" type="image/webp">
+        <img src="images/headshot.jpg" alt="Headshot of James Villanueva" width="400" height="400">
+      </picture>
+      <p>I'm a <strong>computer science student at UC San Diego</strong> (Class of 2028) who builds full-stack web apps and research tools. I'm especially interested in <em>observability</em> and AI-adjacent engineering.</p>
+      <div>
+        <a href="resume.pdf">View my resume</a>
+        <a href="contact.html">Contact me</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured projects</h2>
+      <project-card>
+        <h3>WatchTower</h3>
+        <p>Real-time, authenticated dashboards. Stack: <span translate="no">Node.js</span>, <span translate="no">Supabase</span>.</p>
+        <a href="projects/watchtower.html">Read the WatchTower case study</a>
+      </project-card>
+      <project-card>
+        <h3>Waypoint</h3>
+        <p>A campus directory for UC San Diego student organizations and events.</p>
+        <a href="projects.html">See all projects</a>
+      </project-card>
+      <project-card>
+        <h3>My Dashboard</h3>
+        <p>A personal dashboard. Stack: <span translate="no">React</span>, <span translate="no">TypeScript</span>, <span translate="no">Vite</span>, <span translate="no">Clerk</span>.</p>
+        <a href="projects.html">See all projects</a>
+      </project-card>
+    </section>
+
+    <section aria-labelledby="about-teaser-heading">
+      <h2 id="about-teaser-heading">About me</h2>
+      <p>I'm a first-generation college student, an undergraduate researcher, and a member of ColorStack and SHPE at UC San Diego.</p>
+      <p><a href="about.html">Read my story</a></p>
+    </section>
+
+    <hello-world></hello-world>
+    <noscript>
+      <p>JavaScript is turned off, so the &lt;hello-world&gt; element on this page can't log its message to the console. Everything else on the site works without it.</p>
+    </noscript>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://github.com/JamesVillanueva-Dev">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jamesuvillanueva">LinkedIn</a></li>
+      <li><a href="mailto:j8villanueva@ucsd.edu">Email</a></li>
+      <li><a href="experiments.html">HTML experiments</a></li>
+    </ul>
+    <p><small>&copy; 2026 James Villanueva</small></p>
+  </footer>
+</body>
+</html>

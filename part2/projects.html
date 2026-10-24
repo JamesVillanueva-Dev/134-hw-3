@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Software projects by James Villanueva: full-stack web apps and developer tools.">
+  <meta name="author" content="James Villanueva">
+  <title>Projects | James Villanueva</title>
+  <link rel="icon" href="images/headshot.jpg" type="image/jpeg">
+  <style>
+    /* Custom element #1: a semantic container for one project summary */
+    project-card {
+      display: block;
+      border: 1px solid;
+      padding: 1rem;
+      margin-block: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p><a href="index.html">James Villanueva</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.pdf">Resume (PDF)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Projects</h1>
+    <p>A few things I've built. Each card gives a short summary and the tools I used.</p>
+
+    <project-card>
+      <h2>WatchTower</h2>
+      <p>Real-time, authenticated dashboards built with <span translate="no">Node.js</span> and <span translate="no">Supabase</span>.</p>
+      <a href="projects/watchtower.html">Read the case study</a>
+    </project-card>
+
+    <project-card>
+      <h2>Waypoint</h2>
+      <p>A directory that helps UC San Diego students find student organizations and campus events.</p>
+      <p><label for="waypoint-progress">Status: in development</label>
+        <progress id="waypoint-progress">In development</progress></p>
+      <p>Case study coming soon.</p>
+    </project-card>
+
+    <project-card>
+      <h2>My Dashboard</h2>
+      <p>A personal dashboard built with <span translate="no">React</span>, <span translate="no">TypeScript</span> and <span translate="no">Vite</span>, using <span translate="no">Clerk</span> for sign-in.</p>
+      <p>Case study coming soon.</p>
+    </project-card>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://github.com/JamesVillanueva-Dev">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jamesuvillanueva">LinkedIn</a></li>
+      <li><a href="mailto:j8villanueva@ucsd.edu">Email</a></li>
+      <li><a href="experiments.html">HTML experiments</a></li>
+    </ul>
+    <p><small>&copy; 2026 James Villanueva</small></p>
+  </footer>
+</body>
+</html>

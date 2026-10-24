@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch with James Villanueva.">
+  <meta name="author" content="James Villanueva">
+  <title>Contact | James Villanueva</title>
+  <link rel="icon" href="images/headshot.jpg" type="image/jpeg">
+</head>
+<body>
+  <header>
+    <p><a href="index.html">James Villanueva</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="resume.pdf">Resume (PDF)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact</h1>
+    <p>The fastest way to reach me is email. You can also use the form below.</p>
+
+    <section aria-labelledby="links-heading">
+      <h2 id="links-heading">Find me online</h2>
+      <ul>
+        <li><a href="mailto:j8villanueva@ucsd.edu">j8villanueva@ucsd.edu</a></li>
+        <li><a href="https://www.linkedin.com/in/jamesuvillanueva">LinkedIn</a></li>
+        <li><a href="https://github.com/JamesVillanueva-Dev">GitHub</a></li>
+      </ul>
+      <address>
+        James Villanueva<br>
+        UC San Diego<br>
+        La Jolla, California
+      </address>
+    </section>
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Send a message</h2>
+      <form name="contact" method="post" action="contact.html" data-netlify="true">
+        <fieldset>
+          <legend>Your message</legend>
+          <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+          </p>
+          <button type="submit">Send message</button>
+        </fieldset>
+      </form>
+
+      <dialog id="sent-dialog" aria-labelledby="sent-heading">
+        <h3 id="sent-heading">Message sent</h3>
+        <p>Thanks for reaching out! I'll reply within a few days.</p>
+        <form method="dialog">
+          <button>Close</button>
+        </form>
+      </dialog>
+    </section>
+
+    <section aria-labelledby="map-heading">
+      <h2 id="map-heading">Where I'm based</h2>
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-117.2475%2C32.8725%2C-117.2245%2C32.8885&amp;layer=mapnik"
+        title="Map of the UC San Diego campus" width="600" height="350" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://github.com/JamesVillanueva-Dev">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jamesuvillanueva">LinkedIn</a></li>
+      <li><a href="mailto:j8villanueva@ucsd.edu">Email</a></li>
+      <li><a href="experiments.html">HTML experiments</a></li>
+    </ul>
+    <p><small>&copy; 2026 James Villanueva</small></p>
+  </footer>
+</body>
+</html>
