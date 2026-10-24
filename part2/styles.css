@@ -7,6 +7,30 @@
   --space: 1.5rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem var(--space);
+  background-color: var(--color-text);
+}
+
+nav > ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  margin: 0;
+}
+
 h1{
     font-size: 3rem;
 }
@@ -18,3 +42,4 @@ a {
 a:hover {
     color: orange
 }
+
