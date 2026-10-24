@@ -15,6 +15,9 @@ header {
   gap: 1rem;
   padding: 1rem var(--space);
   background-color: var(--color-text);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav > ul {
