@@ -8,41 +8,58 @@
 :root {
   --color-text: #1f2328;
   --color-bg: #cedaf9;
-  --color-accent: #2563eb;
+  --color-accent: #ffffff;
   --font-main: "Helvetica Neue", Arial, sans-serif;
   --max-width: 60rem;
   --space: 1.5rem;
-  --color-focus: orange;
+  --color-focus: #ffa600;
+  --color-link: #1d4ed8;
 }
 
 
 header {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem var(--space);
+  padding: 0.75rem var(--space);
   background-color: var(--color-text);
+  border-bottom: 3px solid var(--color-accent);
   position: sticky;
   top: 0;
   z-index: 10;
 }
+/* Descendant combinator (space): matches any a inside header, at any depth.
+   Makes header links readable on the dark background. */
+header a {
+  color: white;
+  text-decoration: none;
+}
 
+/* Child combinator (>): matches a p only when it is a direct child of header.
+   Styles the site name. */
+header > p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
 main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space);
 }
 
+
 nav > ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   list-style: none;
 }
 
 nav a {
-  padding: 0.4em 0.8em;  /* em: scales with the link's font size */
+  padding: 0.5em 1em;  /* em: scales with the link's font size */
 }
 
 body {
@@ -70,7 +87,7 @@ h3 {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-link);
 }
 
 a:hover {
@@ -81,11 +98,17 @@ a:focus, input:focus, button:focus, textarea:focus{
     outline: 3px groove var(--color-focus);
 }
 
+  /* Attribute selector ([attr="value"]): matches the section whose aria-labelledby
+     equals "skills-heading". Places the two skill groups side by side. */
 section[aria-labelledby="skills-heading"] {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     column-gap: 3rem;
+}
+p,
+ul {
+  margin-bottom: 1rem;
 }
 #skills-heading {
   width: 100%;
@@ -98,10 +121,11 @@ section[aria-labelledby="skills-heading"] {
   margin: 1rem auto;
 }
 
-p, ul {
-  margin-bottom: 1rem;
+header p,
+header ul {
+  margin: 0;
+  padding: 0;
 }
-
 ul {
   padding-left: 1.5rem;
 }
