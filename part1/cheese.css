@@ -34,11 +34,11 @@ blockquote {
 }
 
 a:hover{
-    color: orange
+    color: orange;
 }
 
 a:focus, button:focus, input:focus{
-    outline: 3px solid red
+    outline: 3px solid red;
 }
 
 /*
