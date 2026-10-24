@@ -1,11 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+
 :root {
   --color-text: #1f2328;
-  --color-bg: #fafafa;
+  --color-bg: #cedaf9;
   --color-accent: #2563eb;
   --font-main: "Helvetica Neue", Arial, sans-serif;
   --max-width: 60rem;
   --space: 1.5rem;
 }
+
 
 header {
   display: flex;
@@ -36,8 +44,12 @@ body {
 
 h1{
     font-size: 3rem;
+    text-align: center;
 }
-
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
 a {
   color: var(--color-accent);
 }
@@ -46,3 +58,16 @@ a:hover {
     color: orange
 }
 
+a:focus, input:focus, button:focus, textarea:focus{
+    outline: 3px groove orange;
+}
+
+section[aria-labelledby="skills-heading"] {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+}
+#skills-heading {
+  width: 100%;
+}
