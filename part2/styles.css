@@ -28,10 +28,20 @@ header {
   z-index: 10;
 }
 
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space);
+}
+
 nav > ul {
   display: flex;
   gap: 1rem;
   list-style: none;
+}
+
+nav a {
+  padding: 0.4em 0.8em;  /* em: scales with the link's font size */
 }
 
 body {
@@ -42,14 +52,22 @@ body {
   margin: 0;
 }
 
-h1{
-    font-size: 3rem;
-    text-align: center;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space);
+  text-align: center;
 }
+
 h2 {
-    font-size: 1.5rem;
-    text-align: center;
+  font-size: 1.75rem;
+  margin-top: var(--space);
+  text-align: center;
 }
+
+h3 {
+  font-size: 1.25rem;
+}
+
 a {
   color: var(--color-accent);
 }
@@ -70,4 +88,35 @@ section[aria-labelledby="skills-heading"] {
 }
 #skills-heading {
   width: 100%;
+}
+#intro-heading{
+    text-align: center;
+}
+#intro-heading + picture img {
+  display: block;
+  margin: 1rem auto;
+}
+
+p, ul {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    position: static;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
