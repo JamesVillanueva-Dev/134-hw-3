@@ -12,6 +12,7 @@
   --font-main: "Helvetica Neue", Arial, sans-serif;
   --max-width: 60rem;
   --space: 1.5rem;
+  --color-focus: orange;
 }
 
 
@@ -73,11 +74,11 @@ a {
 }
 
 a:hover {
-    color: orange
+    color: var(--color-focus);
 }
 
 a:focus, input:focus, button:focus, textarea:focus{
-    outline: 3px groove orange;
+    outline: 3px groove var(--color-focus);
 }
 
 section[aria-labelledby="skills-heading"] {
