@@ -8,17 +8,8 @@
   <title>Projects | James Villanueva</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/headshot.jpg" type="image/jpeg">
-  <style>
-    /* Custom element #1: a semantic container for one project summary */
-    project-card {
-      display: block;
-      border: 1px solid;
-      padding: 1rem;
-      margin-block: 1rem;
-    }
-  </style>
 </head>
-<body>
+<body class="block-cards">
   <header>
     <p><a href="index.html">James Villanueva</a></p>
     <nav aria-label="Main">
@@ -47,7 +38,10 @@
     <project-card>
       <h2>Waypoint</h2>
       <p>A directory that helps UC San Diego students find student organizations and campus events.</p>
-      <p><label for="waypoint-progress">Status: in development</label>
+      <div class="project-progress">
+        <label for="waypoint-progress">In development</label>
+        <progress id="waypoint-progress" aria-label="Waypoint development progress">In development</progress>
+      </div>
       <p>Case study coming soon.</p>
     </project-card>
 

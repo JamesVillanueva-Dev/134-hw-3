@@ -169,6 +169,28 @@ project-card a {
   font-weight: bold;
 }
 
+.project-progress {
+  display: grid;
+  gap: 0.5rem;
+  margin-block: 0.5rem 1rem;
+}
+
+.project-progress label {
+  width: fit-content;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background-color: #e8efff;
+  color: #1d4ed8;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.project-progress progress {
+  width: 100%;
+  height: 0.75rem;
+  accent-color: var(--color-link);
+}
+
 fieldset {
   padding: var(--space);
 }
@@ -193,4 +215,15 @@ article {
   background-color: white;
   padding: var(--space);
   margin-bottom: 1rem;
+}
+
+.block-cards project-card {
+  display: block;
+  border: 1px solid;
+  padding: 1rem;
+  margin-block: 1rem;
+}
+
+.about-page article {
+  border: 1px dashed;
 }
