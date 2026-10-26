@@ -1,3 +1,3 @@
-Repository URL	https://github.com/USERNAME/REPOSITORY
-Part 1 Deployed URL	https://YOUR-DOMAIN/part1/cheese.html
-Part 2 Deployed URL	https://YOUR-DOMAIN/
+Repository URL	https://github.com/JamesVillanueva-Dev/134-hw-3
+Part 1 Deployed URL	https://134hw3.netlify.app/part1/cheese.html
+Part 2 Deployed URL	https://134hw3.netlify.app
