@@ -180,7 +180,7 @@ project-card a {
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   background-color: #e8efff;
-  color: #1d4ed8;
+  color: var(--color-link);
   font-size: 0.875rem;
   font-weight: bold;
 }
